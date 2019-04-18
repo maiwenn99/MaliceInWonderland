@@ -1,0 +1,12 @@
+body {
+    background-image: url("../../images/cheater.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.block-cheat {
+    position: absolute;
+    bottom: 20%;
+    padding: 3em;
+    background-color: rgba(255,255,255,0.5);
+}

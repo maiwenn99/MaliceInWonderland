@@ -50,4 +50,15 @@ class PageController extends AbstractController
     {
         return $this->twig->render('Page/gameOver.html.twig');
     }
+
+
+    public function success()
+    {
+        return $this->twig->render('Page/success.html.twig');
+    }
+
+    public function cheater()
+    {
+        return $this->twig->render('Page/imafuckincheater.html.twig');
+    }
 }
