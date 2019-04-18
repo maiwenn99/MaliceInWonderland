@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 class EnterController extends AbstractController
 {
     public function enter()
