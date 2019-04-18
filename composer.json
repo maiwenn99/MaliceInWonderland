@@ -1,0 +1,13 @@
+{
+    "name": "maiwenn/malice-in-wonderland",
+    "description": "HackatonEaster",
+    "authors": [
+        {
+            "name": "maiwenn99",
+            "email": "maiwenngay99@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
