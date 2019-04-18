@@ -27,7 +27,7 @@ class ItemController extends AbstractController
 //     * @throws \Twig\Error\RuntimeError
 //     * @throws \Twig\Error\SyntaxError
 //     */
-    public function modal()
+    public function index()
     {
         $eggsManager = new ItemManager();
         $eggs = $eggsManager->eggs();
@@ -53,7 +53,7 @@ class ItemController extends AbstractController
             }
         }
 
-        return $this->twig->render('View/modal.html.twig', ['eggs' => $_SESSION['eggs'],
+        return $this->twig->render('Item/modal.html.twig', ['eggs' => $_SESSION['eggs'],
                                                                   'eggsgold' => $_SESSION['eggsgold'],
                                                                     'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
