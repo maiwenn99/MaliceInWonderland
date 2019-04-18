@@ -8,7 +8,6 @@
 
 namespace App\Controller;
 
-
 class PageController extends AbstractController
 {
 
@@ -51,5 +50,4 @@ class PageController extends AbstractController
     {
         return $this->twig->render('Page/gameOver.html.twig');
     }
-
 }
