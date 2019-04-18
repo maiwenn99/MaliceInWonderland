@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/page/page2-3.css">
+{% endblock %}
+{% block content %}
+    {% include '_navbar.html.twig' %}
+    <div class="container-fluid">
+        <div class="arrows">
+            <a href="#"><img src="/assets/images/place23/room23left.png" alt="arrow23l" class="arrow left"></a>
+            <a href="#"><img src="/assets/images/place23/room23right.png" alt="arrow23r" class="arrow right"></a>
+        </div>
+        <div class="cat">
+            <h2>Do you wish <br/> to go back, dear?!</h2>
+            <a href=""><button>Yes Please!</button></a>
+        </div>
+    </div>
+{% endblock content %}
