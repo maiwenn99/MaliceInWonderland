@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+section {
+    background-color: #202020;
+}
+
+#fall {
+    background-attachment: top;
+    z-index: 10;
+    position: relative;
+    margin: 0 auto;
+    -webkit-animation: bounce .9s cubic-bezier(.63,.09,.75,.46) infinite alternate;
+    -moz-animation:    bounce .9s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+    -o-animation:      bounce .9s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+    animation:         bounce .9s cubic-bezier(.63,.09,.75,.46)  infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+    0%, 10% { top: 5em; height: 25em; width: 25em; }
+    15% { height: 25.15em; width: 24.9em; }
+    35% { height: 26em; width: 24.5em; }
+    75% { height: 26em; width: 24.5em; }
+    95% { height: 24em; width: 25.5em; }
+    100% { top: 60em; height: 33em; width: 35em; }
+}
+
+
+
+h1 {
+    font-size: 8em;
+    animation: glitch-1 2s infinite linear;
+}
+
+h2, p {
+    color: white;
+}
+
+p{
+    font-size: 2.2em;
+}
+
+@keyframes glitch-1 {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
+    13% {opacity: .8; transform: scaleY(2); color: #0ff;}
+    53% {opacity: .8; transform: scaleX(.7);  color: #f0f;}
+    83% {opacity: 8; transform: rotate(-10deg); color: #ff0;}
+}
+
+button {
+    padding-bottom: 2.5em;
+    animation: glitch-2 2s infinite linear;
+    font-family: "Press Start 2P", Arial, sans-serif;
+
+}
+
+.btn, .btn-light{
+    padding: 3.5;
+    border: none;
+    font-size: 3.5em;
+    background-color: #202020;
+}
+
+
+
+@keyframes glitch-2 {
+    13% {color: #0ff;}
+    53% {color: #f0f;}
+    83% {color: #ff0;}
+}
+
+.footer {
+    font-size: 0.8em;
+}
+
+.footer2 {
+    color: red;
+}

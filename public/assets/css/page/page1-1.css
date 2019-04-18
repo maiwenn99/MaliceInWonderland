@@ -1,0 +1,59 @@
+
+.left{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 12.5em;
+    bottom: 1.5em;
+    color: black;
+    transform: rotate(10deg);
+    z-index: 1000;
+}
+
+.right{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 16.7em;
+    bottom: 1.5em;
+    color: black;
+    transform: rotate(-10deg);
+    z-index: 1000;
+}
+
+body {
+    background-image: url("../../images/11.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+
+}
+.title{
+    text-align: center;
+}
+
+.title span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+.choose {
+    margin-top: 17em;
+}
+.signs{
+    padding-left: 4em;
+}
+
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
