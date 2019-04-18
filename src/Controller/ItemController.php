@@ -37,7 +37,6 @@ class ItemController extends AbstractController
         if (empty($_SESSION)) {
             $h = 6; //numbers of eggs
             $rand_keys = array_rand($eggs, $h);
-            $_SESSION['eggs'] = $rand_keys;
             $k= $h-3; // $h-3 equal of numbers of gold eggs
             for ($i=0; $i<$k; $i++) {
                 $_SESSION['eggs'][$i] = $eggs[$rand_keys[$i]];
@@ -45,8 +44,17 @@ class ItemController extends AbstractController
             for ($j = $k; $j< $h; $j++) {
                 $_SESSION['eggsgold'][$j] = $eggs[$rand_keys[$j]];
             }
+            $places= ['1.1','1.2','2.1','2.2','2.3','2.4'];
+            shuffle($places);
+            $i=0;
+            foreach ($places as $place){
+                $_SESSION['placeswitheggs'][$place]= $eggs[$rand_keys[$i]];
+                $i++;
+            }
         }
+
         return $this->twig->render('Item/index.html.twig', ['eggs' => $_SESSION['eggs'],
-                                                                  'eggsgold' => $_SESSION['eggsgold']]);
+                                                                  'eggsgold' => $_SESSION['eggsgold'],
+                                                                    'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 }
