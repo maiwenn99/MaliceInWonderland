@@ -1,0 +1,63 @@
+body {
+    background-image: url("../images/house.jpg");
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+}
+.
+
+.title{
+    text-align: center;
+}
+
+.title span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+.choose {
+    margin-top: 17em;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.left{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 17.5em;
+    bottom: 1.7em;
+    color: black;
+    transform: rotate(-15deg);
+    z-index: 1000;
+}
+
+.right{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 30.5em;
+    bottom: 1.4em;
+    color: black;
+    transform: rotate(-10deg);
+    z-index: 1000;
+}
+
+.signs {
+    padding-top: 23em;
+}
+.signL {
+    padding-bottom: 0!important;
+}
+

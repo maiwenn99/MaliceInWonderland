@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/page2-1.css">{% endblock %}
+{% block content %}
+    {% include '_navbar.html.twig' %}
+    <div class="choice container-fluid">
+        <div class="row justify-content-center">
+            <div class="choose col-3 pt-3">
+                <h2>
+                    <div class="title">
+                        <span>T</span>
+                        <span>i</span>
+                        <span>c</span>
+                        <span>-</span>
+                        <span>T</span>
+                        <span>a</span>
+                        <span>c</span>
+                    </div>
+                </h2>
+            </div>
+        </div>
+        <div class="signs row justify-content-around">
+            <div><a href="#"><p class="right">Home</p></a></div>
+            <div><a href="#"><p class="left">Forest</p></a></div>
+            <div class="sign col-2 ">
+                <img class="signL pb-5" src="/assets/images/sign3.png" width="200" height="195">
+            </div>
+            <div class="sign col-2 ">
+                <img class="signR" src="/assets/images/sign.png" width="200" height="185">
+            </div>
+        </div>
+
+
+{% endblock %}

@@ -29,7 +29,7 @@ class PageController extends AbstractController
 
     public function page21()
     {
-        return $this->twig->render('Page/page2-3.html.twig');
+        return $this->twig->render('Page/page2-1.html.twig');
     }
 
     public function page22()
