@@ -5,8 +5,10 @@
     <ul>
 
         {% for egg in eggs %}
+        <li>
         <img src="{{ egg.image }}">
         {% endfor %}
+        </li>
         <hr>
         {% for egggold in eggsgold %}
         <img src="{{ egggold.image }}">
