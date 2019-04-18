@@ -42,11 +42,10 @@ class ItemController extends AbstractController
             for ($i=0; $i<$k; $i++) {
                 $_SESSION['eggs'][$i] = $eggs[$rand_keys[$i]];
             }
-            for($j = $k; $j< $h; $j++) {
+            for ($j = $k; $j< $h; $j++) {
                 $_SESSION['eggsgold'][$j] = $eggs[$rand_keys[$j]];
             }
         }
-
         return $this->twig->render('Item/index.html.twig', ['eggs' => $_SESSION['eggs'],
                                                                   'eggsgold' => $_SESSION['eggsgold']]);
     }
