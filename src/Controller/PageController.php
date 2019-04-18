@@ -61,4 +61,39 @@ class PageController extends AbstractController
     {
         return $this->twig->render('Page/imafuckincheater.html.twig');
     }
+
+    public function modal0()
+    {
+        return $this->twig->render('Page/modalEnter.html.twig');
+    }
+
+    public function modal1()
+    {
+        return $this->twig->render('Page/modalPage1-1.html.twig');
+    }
+
+    public function modal2()
+    {
+        return $this->twig->render('Page/modalPage1-2.html.twig');
+    }
+
+    public function modal3()
+    {
+        return $this->twig->render('Page/modalPage2-1.html.twig');
+    }
+
+    public function modal4()
+    {
+        return $this->twig->render('Page/modalPage2-2.html.twig');
+    }
+
+    public function modal5()
+    {
+        return $this->twig->render('Page/modalPage2-3.html.twig');
+    }
+
+    public function modal6()
+    {
+        return $this->twig->render('Page/modalPage2-4.html.twig');
+    }
 }
