@@ -1,7 +1,67 @@
-/*
-.alice {
-    background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fcf%2F81%2Ff3%2Fcf81f3e6e47586696b51eddb27f15327.jpg");
-    width: 100%;
-    height: 1080px;
 
-}*/
+
+body {
+    background-color: #202020;
+}
+.left{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 775px;
+    bottom: 140px;
+    color: black;
+    transform: rotate(10deg);
+    z-index: 1000;
+}
+
+.right{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 980px;
+    bottom: 140px;
+    color: black;
+    transform: rotate(-10deg);
+    z-index: 1000;
+}
+
+.choice {
+    background-image: url("../images/place1-1/bkgplace11.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 1000px;
+    color: white;
+
+}
+.title{
+    text-align: center;
+}
+
+.title span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+.choose {
+    margin-top: 17em;
+}
+.signs{
+    padding-left: 8em;
+}
+.sign {
+    margin-top: 7em;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
