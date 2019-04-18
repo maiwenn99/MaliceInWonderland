@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
 section {
     background-color: #202020;
@@ -15,19 +16,15 @@ section {
 }
 
 @-webkit-keyframes bounce {
-    0%, 10% { top: 5em; height: 35em; width: 35em; }
-    15% { height: 35.15em; width: 34.9em; }
-    35% { height: 36em; width: 34.5em; }
-    75% { height: 36em; width: 34.5em; }
-    95% { height: 34em; width: 35.5em; }
+    0%, 10% { top: 5em; height: 25em; width: 25em; }
+    15% { height: 25.15em; width: 24.9em; }
+    35% { height: 26em; width: 24.5em; }
+    75% { height: 26em; width: 24.5em; }
+    95% { height: 24em; width: 25.5em; }
     100% { top: 60em; height: 33em; width: 35em; }
 }
 
 
-.papyrus {
-    position: fixed;
-    z-index: -10;
-}
 
 h1 {
     font-size: 8em;
@@ -38,9 +35,43 @@ h2, p {
     color: white;
 }
 
+p{
+    font-size: 2.2em;
+}
+
 @keyframes glitch-1 {
     0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
     13% {opacity: .8; transform: scaleY(2); color: #0ff;}
     53% {opacity: .8; transform: scaleX(.7);  color: #f0f;}
     83% {opacity: 8; transform: rotate(-10deg); color: #ff0;}
+}
+
+button {
+    padding-bottom: 2.5em;
+    animation: glitch-2 2s infinite linear;
+    font-family: "Press Start 2P", Arial, sans-serif;
+
+}
+
+.btn, .btn-light{
+    padding: 3.5;
+    border: none;
+    font-size: 3.5em;
+    background-color: #202020;
+}
+
+
+
+@keyframes glitch-2 {
+    13% {color: #0ff;}
+    53% {color: #f0f;}
+    83% {color: #ff0;}
+}
+
+.footer {
+    font-size: 0.8em;
+}
+
+.footer2 {
+    color: red;
 }
