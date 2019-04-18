@@ -23,3 +23,7 @@ body {
     53% {opacity: .8; transform: scaleX(.7);  color: #f0f;}
     83% {opacity: 8; transform: rotate(-10deg); color: #ff0;}
 }
+
+.picto {
+    margin-top: 20.5em;
+}
