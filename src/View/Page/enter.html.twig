@@ -2,16 +2,16 @@
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/page/enter.css">
 {% endblock %}
-{% block entercontent %}
+{% block content %}
     {% include '_navbar.html.twig' %}
     <div class="container-fluid">
         <div class="enter">
             <h1>Make your first Choice !</h1>
-            <h2>But be very Careful...</h2>
+            {#<h2 class="underTitle">But be very Careful...</h2>#}
         </div>
         <div class="arrows">
-            <a href="#"><img src="/assets/images/enter/enterArrowLeft.png" alt="arrow1" class="arrow left"></a>
-            <a href="#"><img src="/assets/images/enter/enterArrowRight.png" alt="arrow2" class="arrow right"></a>
+            <a href="#"><img src="/assets/images/arrowRoom1Left.png" alt="arrow1" class="arrow left"></a>
+            <a href="#"><img src="/assets/images/arrowRoom1Right.png" alt="arrow2" class="arrow right"></a>
         </div>
     </div>
-{% endblock entercontent%}
+{% endblock %}

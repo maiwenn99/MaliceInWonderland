@@ -1,11 +1,11 @@
 body {
-    background-image: url("../images/enter/enterBackground.png");
+    background-image: url("../../images/bgroom1.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 .enter {
     text-align: center;
-    margin-top: 5em;
+    margin-top: 9em;
 }
 .arrows {
     display: flex;
@@ -15,9 +15,9 @@ body {
     left: 0;
 }
 .arrow {
-    height: 10em;
-    width: 10em;
-    margin-left: 23em;
+    height: 15em;
+    width: 15em;
+    margin-left: 20em;
 }
 .arrows .left {
     animation: glitch-1 2s infinite linear;
@@ -33,7 +33,7 @@ body {
     13% {
         opacity: .8;
         transform: scaleY(2);
-        color: #0ff;
+        color: black;
     }
     53% {
         opacity: .8;
@@ -43,7 +43,7 @@ body {
     83% {
         opacity: 8;
         transform: rotate(-10deg);
-        color: #ff0;
+        color: black;
     }
 }
 .arrows .left:hover {
@@ -51,4 +51,9 @@ body {
 }
 .arrows .right:hover {
     animation: none;
+}
+
+.underTitle {
+    color: #f0f;
+    text-decoration: black;
 }
