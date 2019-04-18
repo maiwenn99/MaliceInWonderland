@@ -1,0 +1,66 @@
+body {
+    background-color: #202020;
+}
+.left{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 42%;
+    bottom: 13.5%;
+    color: black;
+    transform: rotate(10deg);
+    z-index: 1000;
+}
+
+.right{
+    font-family:wonderland;
+    font-size: 3em;
+    position: absolute;
+    left: 53%;
+    bottom: 13.5%;
+    color: black;
+    transform: rotate(-10deg);
+    z-index: 1000;
+}
+
+.choice {
+    background-image: url("../images/darkbg.jpg");
+    filter: brightness(0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 1000px;
+    color: white;
+    z-index: 0;
+}
+.title{
+    text-align: center;
+}
+
+.title span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+.choose {
+    margin-top: 17em;
+}
+.signs{
+    padding-left: 8em;
+}
+.sign {
+    margin-top: 7em;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
