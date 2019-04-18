@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 class Place22Controller extends AbstractController
 {
     public function place22()
