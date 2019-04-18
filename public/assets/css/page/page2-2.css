@@ -1,0 +1,62 @@
+body {
+    background-image: url("../../images/bgroom4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.arrowUp1 {
+    font-size: 5em;
+    animation: glitch-2 2s infinite linear;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 1.7em;
+    margin-left: 4em;
+}
+
+.arrowUp2 {
+    font-size: 5em;
+    animation: glitch-2 2s infinite linear;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 1.7em;
+    margin-left: 13.5em;
+    left: 0;
+}
+
+.arrowDown {
+    display: flex;
+    font-size: 5em;
+    animation: glitch-2 2s infinite linear;
+    bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0.5em;
+    left: 8.5em;
+}
+
+@keyframes glitch-2 {
+    13% {
+        color: #0ff;
+    }
+    53% {
+        color: #f0f;
+    }
+    83% {
+        color: #ff0;
+    }
+}
+
+.arrowUp1:hover {
+    animation: none;
+}
+
+.arrowUp2:hover {
+    animation: none;
+}
+
+.arrowDown:hover {
+    animation: none;
+}
