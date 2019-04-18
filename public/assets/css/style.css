@@ -1,0 +1,20 @@
+@font-face {
+    font-family: wonderland;
+    src: url("../Alice_in_Wonderland_3.ttf");
+}
+
+@font-face {
+    font-family: beyond;
+    src: url("../Beyond Wonderland.ttf");
+}
+
+
+h1 {
+    font-family: wonderland;
+    font-size: 7.5em;
+}
+
+h2 {
+    font-family: beyond;
+    font-size: 4.5em;
+}

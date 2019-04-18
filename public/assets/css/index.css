@@ -1,0 +1,14 @@
+
+section {
+    background-image: url("../images/b1e32dcd40d8650cc5798f6f2cfc5b07.jpg");
+}
+
+.fall {
+    background-attachment: top;
+    z-index: 10;
+}
+
+.papyrus {
+    position: fixed;
+    z-index: -10;
+}
