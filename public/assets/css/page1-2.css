@@ -1,0 +1,25 @@
+body {
+    background-image: url("../images/alice1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.title {
+    position: absolute;
+    padding-top: 1.5em;
+    padding-bottom: 4.5em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    color: white;
+    font-size: 4.8em;
+    animation: glitch-1 2s infinite linear;
+}
+
+@keyframes glitch-1 {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
+    13% {opacity: .8; transform: scaleY(2); color: #0ff;}
+    53% {opacity: .8; transform: scaleX(.7);  color: #f0f;}
+    83% {opacity: 8; transform: rotate(-10deg); color: #ff0;}
+}
