@@ -7,8 +7,8 @@ body {
     font-family:wonderland;
     font-size: 3em;
     position: absolute;
-    left: 775px;
-    bottom: 140px;
+    left: 42%;
+    bottom: 15%;
     color: black;
     transform: rotate(10deg);
     z-index: 1000;
@@ -18,8 +18,8 @@ body {
     font-family:wonderland;
     font-size: 3em;
     position: absolute;
-    left: 980px;
-    bottom: 140px;
+    left: 53%;
+    bottom: 15%;
     color: black;
     transform: rotate(-10deg);
     z-index: 1000;
