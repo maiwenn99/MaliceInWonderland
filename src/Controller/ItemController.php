@@ -47,7 +47,7 @@ class ItemController extends AbstractController
             $places= ['1.1','1.2','2.1','2.2','2.3','2.4'];
             shuffle($places);
             $i=0;
-            foreach ($places as $place){
+            foreach ($places as $place) {
                 $_SESSION['placeswitheggs'][$place]= $eggs[$rand_keys[$i]];
                 $i++;
             }
@@ -56,5 +56,9 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['eggs' => $_SESSION['eggs'],
                                                                   'eggsgold' => $_SESSION['eggsgold'],
                                                                     'placeswitheggs' => $_SESSION['placeswitheggs']]);
+    }
+
+    public function add(){
+        return $this->twig->render('Item/add.html.twig');
     }
 }
