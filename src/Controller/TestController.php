@@ -8,7 +8,6 @@
 
 namespace App\Controller;
 
-
 class TestController extends AbstractController
 {
 
@@ -24,5 +23,4 @@ class TestController extends AbstractController
     {
         return $this->twig->render('Home/test.html.twig');
     }
-
 }

@@ -1,17 +1,16 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: sylvain
- * Date: 07/03/18
- * Time: 18:20
+ * User: Vincent Ostyn
+ * Date: 18/04/19
+ * Time: 16:14
  * PHP version 7
  */
 
 namespace App\Model;
 
-/**
- *
- */
+use GuzzleHttp;
+
 class ItemManager extends AbstractManager
 {
     /**
@@ -27,47 +26,18 @@ class ItemManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-
-    /**
-     * @param array $item
-     * @return int
-     */
-    public function insert(array $item): int
+    public function eggs()
     {
-        // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`) VALUES (:title)");
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
+        $client = new GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr',]);
 
-        if ($statement->execute()) {
-            return (int)$this->pdo->lastInsertId();
-        }
-    }
+        $response = $client->request('GET', '/api/eggs');
 
 
-    /**
-     * @param int $id
-     */
-    public function delete(int $id): void
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
-        $statement->execute();
-    }
+        $body = $response->getBody();
 
 
-    /**
-     * @param array $item
-     * @return bool
-     */
-    public function update(array $item):bool
-    {
-
-        // prepared request
-        $statement = $this->pdo->prepare("UPDATE $this->table SET `title` = :title WHERE id=:id");
-        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-        return $statement->execute();
+        $eggs = $body->getContents();
+        $eggs = GuzzleHttp\json_decode($eggs, true);
+        return $eggs;
     }
 }

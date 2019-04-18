@@ -18,9 +18,7 @@
  * @link     https://github.com/WildCodeSchool/simple-mvc
  *
  */
-
 define('APP_DB_USER', 'user');
 define('APP_DB_PWD', 'password');
 define('APP_DB_HOST', 'localhost');
 define('APP_DB_NAME', 'database_name');
-

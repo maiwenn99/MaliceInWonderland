@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: root
- * Date: 11/10/17
- * Time: 16:07
+ * User: Vincent Ostyn
+ * Date: 18/04/19
+ * Time: 14:07
  * PHP version 7
  */
 
@@ -18,98 +18,48 @@ use App\Model\ItemManager;
 class ItemController extends AbstractController
 {
 
-
-    /**
-     * Display item listing
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
+//
+//    /**
+//     * Display Random eggs listing
+//     *
+//     * @return string
+//     * @throws \Twig\Error\LoaderError
+//     * @throws \Twig\Error\RuntimeError
+//     * @throws \Twig\Error\SyntaxError
+//     */
     public function index()
     {
-        $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
+        $eggsManager = new ItemManager();
+        $eggs = $eggsManager->eggs();
 
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
-    }
+        session_start();
 
-
-    /**
-     * Display item informations specified by $id
-     *
-     * @param int $id
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
-    public function show(int $id)
-    {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
-
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
-    }
-
-
-    /**
-     * Display item edition page specified by $id
-     *
-     * @param int $id
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
-    public function edit(int $id): string
-    {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $item['title'] = $_POST['title'];
-            $itemManager->update($item);
+        if (empty($_SESSION)) {
+            $h = 6; //numbers of eggs
+            $rand_keys = array_rand($eggs, $h);
+            $k= $h-3; // $h-3 equal of numbers of gold eggs
+            for ($i=0; $i<$k; $i++) {
+                $_SESSION['eggs'][$i] = $eggs[$rand_keys[$i]];
+            }
+            for ($j = $k; $j< $h; $j++) {
+                $_SESSION['eggsgold'][$j] = $eggs[$rand_keys[$j]];
+            }
+            $places= ['1.1','1.2','2.1','2.2','2.3','2.4'];
+            shuffle($places);
+            $i=0;
+            foreach ($places as $place) {
+                $_SESSION['placeswitheggs'][$place]= $eggs[$rand_keys[$i]];//place ramdom with eggs random
+                $i++;
+            }
         }
 
-        return $this->twig->render('Item/edit.html.twig', ['item' => $item]);
+        return $this->twig->render('Item/index.html.twig', ['eggs' => $_SESSION['eggs'],
+                                                                  'eggsgold' => $_SESSION['eggsgold'],
+                                                                    'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
-
-    /**
-     * Display item creation page
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
     public function add()
     {
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $itemManager = new ItemManager();
-            $item = [
-                'title' => $_POST['title'],
-            ];
-            $id = $itemManager->insert($item);
-            header('Location:/item/show/' . $id);
-        }
-
         return $this->twig->render('Item/add.html.twig');
-    }
-
-
-    /**
-     * Handle item deletion
-     *
-     * @param int $id
-     */
-    public function delete(int $id)
-    {
-        $itemManager = new ItemManager();
-        $itemManager->delete($id);
-        header('Location:/item/index');
     }
 }
