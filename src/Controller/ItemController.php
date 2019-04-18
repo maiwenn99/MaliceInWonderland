@@ -48,7 +48,7 @@ class ItemController extends AbstractController
             shuffle($places);
             $i=0;
             foreach ($places as $place) {
-                $_SESSION['placeswitheggs'][$place]= $eggs[$rand_keys[$i]];
+                $_SESSION['placeswitheggs'][$place]= $eggs[$rand_keys[$i]];//place ramdom with eggs random
                 $i++;
             }
         }
@@ -58,7 +58,8 @@ class ItemController extends AbstractController
                                                                     'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
-    public function add(){
+    public function add()
+    {
         return $this->twig->render('Item/add.html.twig');
     }
 }
