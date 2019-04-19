@@ -1,21 +1,39 @@
+
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/page/modal.css"
 
-{% endblock %}
+    {% block stylesheet %}
+        <link rel="stylesheet" href="/assets/css/page/modal.css">
+    {% endblock %}
+    {% block content %}
+        {% include '_navbar.html.twig' %}
 
-{% block content %}
-    {% include '_navbar.html.twig' %}
-    <div id="frame">
-        <div id="border">
-            {% for key, placewitheggs in placeswitheggs if key ==2.4%}
-                <a href="../Page/page24"><img src="{{ placewitheggs.image }}"></a>
-                {% for egggold in eggsgold if placewitheggs.id == eggold.id %}
-                    {{ placewitheggs.id }}{{ eggold.id }}
-                {% endfor %}
-            {% endfor %}
+        <div class="flip-card-3D-wrapper">
+            <div id="flip-card">
 
+            </div>
         </div>
-    </div>
-{% endblock %}
+        <div id="modal">
+            <div id="frame">
+                <div id="border">
+                    {% for key, placewitheggs in placeswitheggs if key ==1.6%}
+                        <a href="../Page/page11"><img src="{{ placewitheggs.image }}"></a>
+                        {% for egggold in eggsgold if placewitheggs.id == eggold.id %}
+                            {{ placewitheggs.id }}{{ eggold.id }}
+                        {% endfor %}
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="../Page/over"><button class="btn-light btn button"><i class="fas fa-question"></i></button></a>
+                    <a href="../Page/success"><button class="btn-light btn"><i class="fas fa-question"></i></button></a>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}

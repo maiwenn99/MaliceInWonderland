@@ -1,4 +1,14 @@
-body{background-color:#f2f2f2}
+body{
+    background-image: url("../../images/b1e32dcd40d8650cc5798f6f2cfc5b07.png");
+    background-color: burlywood;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#modal {
+    margin-top: 10em;
+}
+
 
 #frame{
     position:relative;
@@ -27,4 +37,42 @@ img{
     border-left:solid 2px #aaa;
     border-bottom:solid 2px #ccc;
     border-right:solid 2px #ccc;
+}
+
+.button {
+    margin-left: 24em;
+    margin-right: 10em;
+}
+
+button {
+    height: 6em;
+    width: 6em;
+    animation: glitch-1 2s infinite linear;
+}
+
+.fas .fa-question {
+    font-size: 5.5em;
+}
+
+
+@keyframes glitch-1 {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
+    13% {
+        opacity: .8;
+        transform: scaleY(.7);
+        color: black;
+    }
+    53% {
+        opacity: .8;
+        transform: scaleX(.7);
+        color: #f0f;
+    }
+    83% {
+        opacity: 8;
+        transform: rotate(-10deg);
+        color: black;
+    }
 }

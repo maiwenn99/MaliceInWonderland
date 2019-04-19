@@ -7,16 +7,31 @@
 {% block content %}
 {% include '_navbar.html.twig' %}
 
-<div id="frame">
-    <div id="border">
-        {% for key, placewitheggs in placeswitheggs if key ==1.1%}
-            <a href="../Page/page11"><img src="{{ placewitheggs.image }}"></a>
-            {#{% for egggold in eggsgold if placewitheggs.id == eggold.id %}
-                {{ placewitheggs.id }}{{ eggold.id }}
-            {% endfor %}#}
+    <div class="flip-card-3D-wrapper">
+        <div id="flip-card">
 
-        {% endfor %}
+        </div>
+    </div>
+<div id="modal">
+    <div id="frame">
+        <div id="border">
+            {% for key, placewitheggs in placeswitheggs if key ==1.1%}
+                <a href="../Page/page11"><img src="{{ placewitheggs.image }}"></a>
+                {#{% for egggold in eggsgold if placewitheggs.id == eggold.id %}
+                    {{ placewitheggs.id }}{{ eggold.id }}
+                {% endfor %}#}
 
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<div class="container justify-content-center">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="page11"><button class="btn-light btn button"><i class="fas fa-question"></i></button></a>
+            <a href="page12"><button class="btn-light btn"><i class="fas fa-question"></i></button></a>
+        </div>
     </div>
 </div>
 
