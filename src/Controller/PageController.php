@@ -137,18 +137,16 @@ class PageController extends AbstractController
             'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
-    public function modal6()
-    {
-        return $this->twig->render('Page/modalPage2-4.html.twig', ['eggs' => $_SESSION['eggs'],
-            'eggsgold' => $_SESSION['eggsgold'],
-            'placeswitheggs' => $_SESSION['placeswitheggs']]);
-    }
 
     public function nul()
     {
         return $this->twig->render('Page/nul.html.twig');
     }
 
+    public function index()
+    {
+        return $this->twig->render('Page/index.html.twig');
+    }
 
 
     public function restart()
