@@ -28,6 +28,7 @@ class PageManager extends AbstractManager
 
     public function eggs()
     {
+
         $client = new GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr',]);
 
         $response = $client->request('GET', '/api/eggs');

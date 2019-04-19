@@ -17,8 +17,6 @@ class PageController extends AbstractController
         $eggsManager = new PageManager();
         $eggs = $eggsManager->eggs();
 
-        session_start();
-
         if (empty($_SESSION)) {
             $h = 6; //numbers of eggs
             $rand_keys = array_rand($eggs, $h);
@@ -126,5 +124,11 @@ class PageController extends AbstractController
     public function modal6()
     {
         return $this->twig->render('Page/modalPage2-4.html.twig');
+    }
+
+    public function restart()
+    {
+        session_destroy();
+        header('location: index');
     }
 }
