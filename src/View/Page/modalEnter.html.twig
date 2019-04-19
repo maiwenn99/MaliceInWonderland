@@ -2,12 +2,23 @@
 
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/page/modal.css"
-
+    <link rel="stylesheet" href="/assets/css/page/modal.css">
 {% endblock %}
-
 {% block content %}
 {% include '_navbar.html.twig' %}
-{% include 'Item/modal.html.twig' %}
+
+<div id="frame">
+    <div id="border">
+        {% for key, placewitheggs in placeswitheggs if key ==1.1%}
+            <a href="../Page/page11"><img src="{{ placewitheggs.image }}"></a>
+            {#{% for egggold in eggsgold if placewitheggs.id == eggold.id %}
+                {{ placewitheggs.id }}{{ eggold.id }}
+            {% endfor %}#}
+
+        {% endfor %}
+
+    </div>
+</div>
+
 {% endblock %}
 

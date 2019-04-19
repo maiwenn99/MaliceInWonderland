@@ -7,5 +7,15 @@
 
 {% block content %}
     {% include '_navbar.html.twig' %}
-    {% include 'modal.html.twig' %}
+    <div id="frame">
+        <div id="border">
+            {% for key, placewitheggs in placeswitheggs if key ==2.4%}
+                <a href="../Page/page24"><img src="{{ placewitheggs.image }}"></a>
+                {% for egggold in eggsgold if placewitheggs.id == eggold.id %}
+                    {{ placewitheggs.id }}{{ eggold.id }}
+                {% endfor %}
+            {% endfor %}
+
+        </div>
+    </div>
 {% endblock %}

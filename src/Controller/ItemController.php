@@ -32,7 +32,6 @@ class ItemController extends AbstractController
         $eggsManager = new ItemManager();
         $eggs = $eggsManager->eggs();
 
-        session_start();
 
         if (empty($_SESSION)) {
             $h = 6; //numbers of eggs
