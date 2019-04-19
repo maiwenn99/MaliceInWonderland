@@ -53,7 +53,7 @@ class ItemController extends AbstractController
             }
         }
 
-        return $this->twig->render('Item/index.html.twig', ['eggs' => $_SESSION['eggs'],
+        return $this->twig->render('Item/modal.html.twig', ['eggs' => $_SESSION['eggs'],
                                                                   'eggsgold' => $_SESSION['eggsgold'],
                                                                     'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }

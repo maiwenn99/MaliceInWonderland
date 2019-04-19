@@ -1,10 +1,13 @@
 {% extends 'layout.html.twig' %}
+
+
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/page/modal.css">
+    <link rel="stylesheet" href="/assets/css/page/modal.css"
+
 {% endblock %}
 
 {% block content %}
-    {% include '_navbar.html.twig' %}
-    {% include 'modal.html.twig' %}
-
+{% include '_navbar.html.twig' %}
+{% include 'Item/modal.html.twig' %}
 {% endblock %}
+
