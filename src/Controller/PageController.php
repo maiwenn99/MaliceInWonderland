@@ -132,4 +132,12 @@ class PageController extends AbstractController
     {
         return $this->twig->render('Page/nul.html.twig');
     }
+
+
+
+    public function restart()
+    {
+        session_destroy();
+        header('location: index');
+    }
 }
