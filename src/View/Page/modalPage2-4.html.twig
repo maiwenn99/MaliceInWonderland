@@ -1,11 +1,17 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/page/modal.css"
+    <link rel="stylesheet" href="/assets/css/page/modal.css">
 
 {% endblock %}
 
 {% block content %}
     {% include '_navbar.html.twig' %}
-    {% include 'modal.html.twig' %}
+    <div id="frame">
+        <div id="border">
+            {% for key, placewithegg in placeswitheggs if key ==2.4%}
+                <a href="../Page/page24"><img src="{{ placewithegg.image }}"></a>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
