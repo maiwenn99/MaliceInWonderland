@@ -1,0 +1,63 @@
+body {
+    background-image: url("/assets/images/place2-4/bgroom7.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.queens {
+    height: 10em;
+    width: 10em;
+    position: absolute;
+    bottom: 13em;
+}
+
+.nice {
+    margin-left: 17em;
+}
+
+.mean {
+    margin-left: 63em;
+}
+
+.nice:hover {
+    margin-left: 19em;
+    bottom: 11em;
+}
+
+.mean:hover {
+    margin-left: 61em;
+    bottom: 11em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    position: absolute;
+    margin-left: 22em;
+    bottom: 14em;
+    animation: glitch-1 2s infinite linear;
+}
+
+@keyframes glitch-1 {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
+    13% {opacity: .8; transform: scaleY(2); color: #ffffff;}
+    83% {opacity: 8; transform: rotate(-10deg); color: #201004;}
+}
+
+button {
+    bottom: 1em;
+    position: absolute;
+    animation: glitch-2 2s infinite linear;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    border: none;
+    font-size: 1.8em;
+    background-color: #202020;
+    margin-left: 23.1em;
+}
+
+@keyframes glitch-2 {
+    13% {color: #0ff;}
+    53% {color: #f0f;}
+    83% {color: #ff0;}
+}
