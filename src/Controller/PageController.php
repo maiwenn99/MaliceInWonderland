@@ -138,6 +138,7 @@ class PageController extends AbstractController
     }
 
 
+
     public function nul()
     {
         return $this->twig->render('Page/nul.html.twig');
