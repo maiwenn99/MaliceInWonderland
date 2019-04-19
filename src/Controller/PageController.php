@@ -102,7 +102,7 @@ class PageController extends AbstractController
 
     public function modal1()
     {
-        return $this->twig->render('Page/modalPage1-1.html.twig',['eggs' => $_SESSION['eggs'],
+        return $this->twig->render('Page/modalPage1-1.html.twig', ['eggs' => $_SESSION['eggs'],
             'eggsgold' => $_SESSION['eggsgold'],
             'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
