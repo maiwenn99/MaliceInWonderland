@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
 body {
     background-image: url("../../images/bgsuccess.jpg");
     background-size: cover;
@@ -40,4 +42,24 @@ h1 {
 
 h2 {
     font-size: 4.5em;
+}
+
+button {
+    padding-bottom: 2.5em;
+    animation: glitch-2 2s infinite linear;
+    font-family: "Press Start 2P", Arial, sans-serif;
+
+}
+
+.btn, .btn-light{
+    padding: 3.5;
+    border: none;
+    font-size: 3.5em;
+    background-color: #202020;
+}
+
+@keyframes glitch-2 {
+    13% {color: #0ff;}
+    53% {color: #f0f;}
+    83% {color: #ff0;}
 }

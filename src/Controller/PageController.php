@@ -17,6 +17,8 @@ class PageController extends AbstractController
         $eggsManager = new PageManager();
         $eggs = $eggsManager->eggs();
 
+        session_start();
+
         if (empty($_SESSION)) {
             $h = 6; //numbers of eggs
             $rand_keys = array_rand($eggs, $h);
@@ -141,6 +143,13 @@ class PageController extends AbstractController
             'eggsgold' => $_SESSION['eggsgold'],
             'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
+
+    public function nul()
+    {
+        return $this->twig->render('Page/nul.html.twig');
+    }
+
+
 
     public function restart()
     {
