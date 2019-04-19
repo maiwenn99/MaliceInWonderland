@@ -1,63 +1,63 @@
 body {
-    background-image: url("../../images/darkbg.jpg");
-    background-size: cover;
+    background-image: url("/assets/images/bgroom7.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
-    color: white;
-
 }
 
-
-.left{
-    font-family:wonderland;
-    font-size: 3em;
+.queens {
+    height: 10em;
+    width: 10em;
     position: absolute;
-    left: 42%;
-    bottom: 13.5%;
-    color: black;
-    transform: rotate(10deg);
-    z-index: 1000;
+    bottom: 13em;
 }
 
-.right{
-    font-family:wonderland;
-    font-size: 3em;
-    position: absolute;
-    left: 53%;
-    bottom: 13.5%;
-    color: black;
-    transform: rotate(-10deg);
-    z-index: 1000;
+.nice {
+    margin-left: 17em;
 }
 
-.title{
+.mean {
+    margin-left: 63em;
+}
+
+.nice:hover {
+    margin-left: 19em;
+    bottom: 11em;
+}
+
+.mean:hover {
+    margin-left: 61em;
+    bottom: 11em;
+}
+
+h1 {
     text-align: center;
+    font-size: 4.5em;
+    position: absolute;
+    margin-left: 5.6em;
+    bottom: 5.5em;
+    animation: glitch-1 2s infinite linear;
 }
 
-.title span{
-    display: inline-block;
-    animation: animate 1s linear forwards;
+@keyframes glitch-1 {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
+    13% {opacity: .8; transform: scaleY(2); color: #ffffff;}
+    83% {opacity: 8; transform: rotate(-10deg); color: #201004;}
 }
 
-.choose {
-    margin-top: 17em;
-}
-.signs{
-    padding-left: 8em;
-}
-.sign {
-    margin-top: 7em;
+button {
+    bottom: 1em;
+    position: absolute;
+    animation: glitch-2 2s infinite linear;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    border: none;
+    font-size: 1.8em;
+    background-color: #202020;
+    margin-left: 23.1em;
 }
 
-@keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotateY(90deg);
-        filter: blur(10px);
-    }
-    100%{
-        opacity: 1;
-        transform: rotateY(0deg);
-    }
+@keyframes glitch-2 {
+    13% {color: #0ff;}
+    53% {color: #f0f;}
+    83% {color: #ff0;}
 }
