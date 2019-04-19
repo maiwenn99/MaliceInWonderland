@@ -12,7 +12,7 @@ use App\Model\PageManager;
 
 class PageController extends AbstractController
 {
-    public function index()
+    public function enter()
     {
         $eggsManager = new PageManager();
         $eggs = $eggsManager->eggs();
@@ -38,19 +38,21 @@ class PageController extends AbstractController
             }
         }
 
-        return $this->twig->render('Page/index.html.twig', ['eggs' => $_SESSION['eggs'],
+        return $this->twig->render('Page/enter.html.twig', ['eggs' => $_SESSION['eggs'],
             'eggsgold' => $_SESSION['eggsgold'],
             'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
-    public function enter()
+    /*public function enter()
     {
         return $this->twig->render('Page/enter.html.twig');
-    }
+    }*/
 
     public function page11()
     {
-        return $this->twig->render('Page/page1-1.html.twig');
+        return $this->twig->render('Page/page1-1.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function page12()
@@ -95,37 +97,51 @@ class PageController extends AbstractController
 
     public function modal0()
     {
-        return $this->twig->render('Page/modalEnter.html.twig');
+        return $this->twig->render('Page/modalEnter.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal1()
     {
-        return $this->twig->render('Page/modalPage1-1.html.twig');
+        return $this->twig->render('Page/modalPage1-1.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal2()
     {
-        return $this->twig->render('Page/modalPage1-2.html.twig');
+        return $this->twig->render('Page/modalPage1-2.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal3()
     {
-        return $this->twig->render('Page/modalPage2-1.html.twig');
+        return $this->twig->render('Page/modalPage2-1.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal4()
     {
-        return $this->twig->render('Page/modalPage2-2.html.twig');
+        return $this->twig->render('Page/modalPage2-2.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal5()
     {
-        return $this->twig->render('Page/modalPage2-3.html.twig');
+        return $this->twig->render('Page/modalPage2-3.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function modal6()
     {
-        return $this->twig->render('Page/modalPage2-4.html.twig');
+        return $this->twig->render('Page/modalPage2-4.html.twig', ['eggs' => $_SESSION['eggs'],
+            'eggsgold' => $_SESSION['eggsgold'],
+            'placeswitheggs' => $_SESSION['placeswitheggs']]);
     }
 
     public function nul()
