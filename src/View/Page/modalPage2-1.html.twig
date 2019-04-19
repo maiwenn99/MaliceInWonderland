@@ -16,11 +16,9 @@
         <div id="modal">
             <div id="frame">
                 <div id="border">
-                    {% for key, placewitheggs in placeswitheggs if key ==2.2%}
-                        <a href=""><img src="{{ placewitheggs.image }}"></a>
-                        {% for egggold in eggsgold if placewitheggs.id == eggold.id %}
-                            {{ placewitheggs.id }}{{ eggold.id }}
-                        {% endfor %}
+                    {% for key, placewithegg in placeswitheggs if key ==2.2%}
+                        <a href="../Page/page22"><img src="{{ placewithegg.image }}"></a>
+
 
                     {% endfor %}
 

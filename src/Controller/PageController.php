@@ -20,6 +20,7 @@ class PageController extends AbstractController
         session_start();
 
         if (empty($_SESSION)) {
+            $_SESSION['cart']= 0;
             $h = 6; //numbers of eggs
             $rand_keys = array_rand($eggs, $h);
             $k = $h - 3; // $h-3 equal of numbers of gold eggs
@@ -40,43 +41,88 @@ class PageController extends AbstractController
 
         return $this->twig->render('Page/enter.html.twig', ['eggs' => $_SESSION['eggs'],
             'eggsgold' => $_SESSION['eggsgold'],
-            'placeswitheggs' => $_SESSION['placeswitheggs']]);
+            'placeswitheggs' => $_SESSION['placeswitheggs'],
+            'cart'=>$_SESSION['cart']]);
     }
-
-    /*public function enter()
-    {
-        return $this->twig->render('Page/enter.html.twig');
-    }*/
 
     public function page11()
     {
-        return $this->twig->render('Page/page1-1.html.twig', ['eggs' => $_SESSION['eggs'],
-            'eggsgold' => $_SESSION['eggsgold'],
-            'placeswitheggs' => $_SESSION['placeswitheggs']]);
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["1.2"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] +=1;
+
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
+        return $this->twig->render('Page/page1-1.html.twig');
     }
 
     public function page12()
     {
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["1.2"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] +=1;
+
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
         return $this->twig->render('Page/page1-2.html.twig');
     }
 
     public function page21()
     {
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["2.1"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] +=1;
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
         return $this->twig->render('Page/page2-1.html.twig');
     }
 
     public function page22()
     {
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["2.2"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] ++;
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
         return $this->twig->render('Page/page2-2.html.twig');
     }
 
     public function page23()
     {
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["2.3"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] +=1;
+
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
         return $this->twig->render('Page/page2-3.html.twig');
     }
 
     public function page24()
     {
+        for($i=3;$i<=5;$i++) {
+            if (($_SESSION['placeswitheggs']["2.4"]["id"]) === ($_SESSION['eggsgold'][$i]["id"])) {
+                $_SESSION['cart'] +=1;
+            }
+            if (($_SESSION['cart']) === 3){
+                return $this->twig->render('Page/success.html.twig');
+            }
+        }
         return $this->twig->render('Page/page2-4.html.twig');
     }
 
@@ -153,6 +199,6 @@ class PageController extends AbstractController
     public function restart()
     {
         session_destroy();
-        header('location: index');
+        header('location:/');
     }
 }

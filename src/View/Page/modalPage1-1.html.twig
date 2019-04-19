@@ -1,5 +1,5 @@
 
-    {% extends 'layout.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 
     {% block stylesheet %}
@@ -16,11 +16,9 @@
         <div id="modal">
             <div id="frame">
                 <div id="border">
-                    {% for key, placewitheggs in placeswitheggs if key ==1.2%}
-                        <a href=""><img src="{{ placewitheggs.image }}"></a>
-                        {% for egggold in eggsgold if placewitheggs.id == eggold.id %}
-                            {{ placewitheggs.id }}{{ eggold.id }}
-                        {% endfor %}
+                    {% for key, placewithegg in placeswitheggs if key ==1.2%}
+                        <a href="../Page/page12"><img src="{{ placewithegg.image }}"></a>
+
 
                     {% endfor %}
 
