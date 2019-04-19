@@ -127,4 +127,9 @@ class PageController extends AbstractController
     {
         return $this->twig->render('Page/modalPage2-4.html.twig');
     }
+
+    public function nul()
+    {
+        return $this->twig->render('Page/nul.html.twig');
+    }
 }
